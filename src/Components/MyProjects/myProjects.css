@@ -1,0 +1,53 @@
+.MyProjects {
+  padding-top: 100px;
+}
+
+.MyProjectsTitle {
+  color: rgb(30, 30, 30);
+  font-family: Poppins;
+  font-size: 65px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.MyProjectsText {
+  font-family: Poppins;
+  font-size: 21px;
+  font-weight: 400;
+  max-width: 921px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.Projects {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+.Project {
+  max-width: 500px;
+  max-height: 500px;
+  cursor: pointer;
+}
+
+.Project img {
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 953px) {
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .Projects {
+    flex-direction: column;
+    align-items: center;
+  }
+}

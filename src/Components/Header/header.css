@@ -1,0 +1,119 @@
+header {
+  width: 100%;
+}
+
+/********************************************************* NavBar *******************************************************************/
+
+.title {
+  font-family: 'Lora';
+  font-weight: 400;
+  font-style: normal;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+}
+
+nav ul {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  list-style: none; /* Added */
+}
+
+nav ul li {
+  position: relative;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+nav ul li::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: rgb(253, 111, 0);
+  bottom: -5px;
+  transition: all 0.2s;
+}
+
+nav ul li:hover::after {
+  width: 100%;
+}
+
+nav ul button {
+  padding: 10px 18px;
+  border: none;
+  background-color: rgb(253, 111, 0);
+  color: #fff;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+nav ul button:hover {
+  background-color: rgb(190, 84, 3);
+}
+
+.menuIcon {
+  display: none;
+  font-size: 38px;
+}
+
+/*********************************************************  *******************************************************************/
+
+@media screen and (max-width: 980px) {
+  nav ul li {
+    font-size: 15px;
+  }
+  nav ul button {
+    font-size: 15px;
+    padding: 5px 10px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .menuIcon {
+    display: block;
+  }
+
+  nav ul,
+  nav ul button {
+    display: none;
+  }
+
+  .active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    color: #000;
+    z-index: 999;
+    transition: all 0.2s;
+  }
+
+  .active ul li,
+  .active button {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .active .bx-menu {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+}
